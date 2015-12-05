@@ -21,35 +21,22 @@ In short you have to take the following two steps:
 ## Build
 
 There are installation ready packages for the latest [releases][release] and
-[dev builds][develop]. But to clone and build **h5ai** yourself run the
-following commands to find a fresh zipball in folder `build` (tested on linux
-only, requires [`git`][git] and [`node 0.12+`][node] to be installed).
+[dev builds][develop]. But to build **h5ai** yourself either *git-clone* or
+*download* the repository. From within the root folder run the following
+commands to find a fresh zipball in folder `build` (tested on linux only,
+requires [`node 4.0+`][node] to be installed).
 
-
-First install the global command line trigger for the [`mkr`][mkr] build tool:
-
-~~~
-> npm install -g mkr-global
-~~~
-
-Then run:
-
-~~~
-> git clone git://github.com/lrsjng/h5ai.git
-> cd h5ai
+~~~sh
 > npm install
-> mkr release
+> npm run build
 ~~~
-
-To build the frontend test suite run `mkr build-test`. This will output a
-`file://`-URL you can look up in your browser to run the tests.
 
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2015 Lars Jung (http://larsjung.de)
+Copyright (c) 2015 Lars Jung (https://larsjung.de)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -73,17 +60,15 @@ THE SOFTWARE.
 ## References
 
 **h5ai** profits from other projects, all of them licensed under the MIT license
-too. Exceptions are the [Material Design icons][material-design-icons] (CC BY 4.0).
+too. Exceptions are some [Material Design icons][material-design-icons] (CC BY 4.0).
 
 
-[web]: http://larsjung.de/h5ai/
+[web]: https://larsjung.de/h5ai/
 [github]: https://github.com/lrsjng/h5ai
 [github-issues]: https://github.com/lrsjng/h5ai/issues
-[release]: http://release.larsjung.de/h5ai/
-[develop]: http://release.larsjung.de/h5ai/develop/
-[git]: http://git-scm.com
+[release]: https://release.larsjung.de/h5ai/
+[develop]: https://release.larsjung.de/h5ai/develop/
 [node]: https://nodejs.org
-[mkr]: http://larsjung.de/mkr/
 [material-design-icons]: https://github.com/google/material-design-icons
 
 [license-img]: https://img.shields.io/badge/license-MIT-a0a060.svg?style=flat-square

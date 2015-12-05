@@ -1,35 +1,31 @@
 (function () {
+    var doc = document;
+    var el = doc.documentElement;
+    var id = 'no-browser';
+    el.className = '';
+    if (doc.getElementById(id)) {
+        el.className = id;
+        throw id;
+    }
+}());
 
-if (function () {
-    var el = document.createElement('i');
-    el.innerHTML = '<!--[if lt IE 10]><br><![endif]-->';
-    return el.getElementsByTagName('br').length;
-}()) {
-    document.documentElement.className = 'js no-browser';
-    return;
-}
-
-// @include "lib/modernizr-*.js"
-// @include "lib/jquery-*.js"
-// @include "lib/jquery.*.js"
-// @include "lib/lodash-*.js"
-// @include "lib/marked-*.js"
-// @include "lib/modulejs-*.js"
-// @include "lib/prism-*.js"
+// @include 'vendor/jquery-*.js'
+// @include 'vendor/jquery.*.js'
+// @include 'vendor/lodash-*.js'
+// @include 'vendor/marked-*.js'
+// @include 'vendor/modulejs-*.js'
+// @include 'vendor/prism-*.js'
 
 (function () {
-    'use strict';
+    'use strict'; // eslint-disable-line strict
 
     var win = window;
     modulejs.define('_', function () { return win._; });
     modulejs.define('$', function () { return win.jQuery; });
     modulejs.define('marked', function () { return win.marked; });
-    modulejs.define('modernizr', function () { return win.Modernizr; });
     modulejs.define('prism', function () { return win.Prism; });
 
-    // @include "inc/**/*.js"
+    // @include 'lib/**/*.js'
 
     modulejs.require('boot');
-}());
-
 }());
